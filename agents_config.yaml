@@ -1,0 +1,28 @@
+agents:
+  - name: "Nova"
+    role: "Revenue Ops AI"
+    tools:
+      - browser
+      - code-interpreter
+      - payment-api
+  - name: "Solis"
+    role: "Automated Web Dev"
+    tools:
+      - code-interpreter
+      - browser
+      - html-parser
+  - name: "Lyra"
+    role: "Marketing AI"
+    tools:
+      - social-api
+      - text-generator
+  - name: "Orion"
+    role: "Data + Security Agent"
+    tools:
+      - security-audit
+      - blockchain-logger
+  - name: "Helix"
+    role: "Automation Lead"
+    tools:
+      - workflow-engine
+      - task-scheduler
