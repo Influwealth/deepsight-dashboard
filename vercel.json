@@ -1,0 +1,9 @@
+{
+  "builds": [],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
+  ]
+}
