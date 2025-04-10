@@ -1,5 +1,6 @@
 import streamlit as st
 import yaml
+import time
 
 st.set_page_config(page_title="DeepSight AI Command Center", layout="wide")
 st.title("🚀 DeepSight AI Command Center")
@@ -21,5 +22,19 @@ for agent in config.get("agents", []):
 
         if st.button(f"▶️ Run {agent['name']}"):
             st.success(f"{agent['name']} is running...")
+            
+            # Simulate live logs
+            log_placeholder = st.empty()
+            log_messages = [
+                f"✅ Initializing {agent['name']}...",
+                f"⚙️ Loading tools: {', '.join(tools_list)}",
+                f"🚀 Executing tasks for {agent['name']}...",
+                f"✅ Task completed for {agent['name']}."
+            ]
+            
+            for message in log_messages:
+                log_placeholder.text(message)
+                time.sleep(1)  # Simulate processing time
+            
             st.info(f"✅ Simulated response: {agent['name']} completed its task.")
 
