@@ -18,7 +18,3 @@ for agent in config.get("agents", []):
         st.write(f"**Tools:** {', '.join(agent['tools'])}")
         if st.button(f"▶️ Run {agent['name']}"):
             st.success(f"{agent['name']} triggered (simulated).")
-
-st.divider()
-st.subheader("🧪 Session State")
-st.json(st.session_state)
